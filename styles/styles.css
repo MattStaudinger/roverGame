@@ -1,0 +1,105 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: dodgerblue;
+  margin: 30px 0;
+}
+
+.wrapper {
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+  width: 60%;
+  height: 100px;
+  display: grid;
+  margin: 50px auto;
+}
+
+.box {
+  background-color: beige;
+  color: black;
+  border-radius: 2px;
+  border: 1px dodgerblue solid;
+  text-align: center;
+  padding: 7px;
+  
+
+}
+
+.img-rover {
+  width: 5%;
+  position: absolute;
+  top: 200px;
+  left: 300px;
+}
+
+.robotAI {
+  padding: 10px;
+  background-color: black;
+  position: relative;
+  bottom: 10px;
+  border-right: 10px solid blue;
+}
+
+.counter {
+width: 20%;
+float: right;
+margin: 0 70%;
+position: absolute;
+top: 20%;
+
+}
+
+.counter button {
+  display: block;
+  background-color: rgb(9, 99, 163);
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  padding: 14px 0px;
+  border: 0.5px black solid;
+  display: block;
+  width: 190px;
+  margin-top: 20px;
+
+}
+
+.counterInput {
+  background-color: rgb(126, 189, 235);
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  width: 150px;
+  padding: 14px 20px;
+  border: 0.5px black solid;
+  display: inline-block;
+  margin: 2px 0;
+}
+.counter input::placeholder {
+  color: white;
+  font-size: 1em;
+}
+
+.counter select {
+  width: 190px;
+  height: 50px;
+}
+
+
+.counter p {
+  margin: 5px 0;
+  font-size: 0.8em;
+}
+
+.counter .clock {
+  margin: 50px 0;
+  font-size: 1.8em;
+  color: dodgerblue;
+}
+
+#newGame {
+  margin-top: 10px;
+}
