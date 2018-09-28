@@ -27,14 +27,14 @@ window.addEventListener("keydown", function(event) {
 
 
 function startGame() {
-let enemieCounter = document.getElementById("enemies").value;
-let obstacleCounter = document.getElementById("obstacles").value;;
+let enemieCounter = document.getElementById("enemies").value == "" ? 0 : document.getElementById("enemies").value ;
+let obstacleCounter = document.getElementById("obstacles").value == "" ? 0 : document.getElementById("obstacles").value;
 let speed = document.getElementById("level").value;
 switch (speed) {
   case "1": speed = 1500; break;
   case "2": speed = 650; break;
-  case "3": speed = 450; break;
-  case "4": speed = 350; break;
+  case "3": speed = 350; break;
+  case "4": speed = 150; break;
 }
 //connect javaScript with HTML
 for (let i=0; i<10; i++) {
@@ -413,18 +413,16 @@ let x, y;
     }
   divElement[i] = document.createElement("div"); 
   divElement[i].classList.add("robotAI");
-  document.getElementById("box"+robotAI[i].x + robotAI[i].y).appendChild(divElement[i]);
+  document.getElementById("box"+robotAI[i].y + robotAI[i].x).appendChild(divElement[i]);
 }
 }
 
 
 function checkCollision(roverName1X, roverName1Y, roverName2X, roverName2Y) {
-  for (let i=0; i<obstacleLocation.length; i++) {
-    if ((roverName1X === roverName2X) && (roverName1Y === roverName2Y)) {
+  if ((roverName1X === roverName2X) && (roverName1Y === roverName2Y)) {
       alert("YOU LOST! You survived " + time)
       window.location.reload();
       return true;
-    } else i++;
   }
   return false;
 }
